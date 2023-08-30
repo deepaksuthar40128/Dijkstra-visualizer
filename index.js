@@ -7,7 +7,7 @@ const { Worker, isMainThread, parentPort } = require('worker_threads');
 
 
 const app = express();
-app.use(bodyParser.urlencoded({ extended: true, parameterLimit: 50000 }))
+app.use(bodyParser.urlencoded({limit:"10mb", extended: true, parameterLimit: 50000 }))
 app.use(express.static(path.join(__dirname, 'static')));
 app.get("/", (req, res) => {
     res.sendFile(__dirname + '/a.html');
