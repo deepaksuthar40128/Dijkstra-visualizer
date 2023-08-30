@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijkstra Visualizer</title>
+    <link rel="stylesheet" href="css/a.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="App">
+        <div>
+            <input disabled type="number" name="size" id="size" min="1" value="5">
+            <select name="color" id="color">
+                <option value="rgb(255 73 73)">Red</option>
+                <option value="rgb(255 73 180)">Pink</option>
+                <option value="rgb(73 255 76)">Green</option>
+                <option value="rgb(255, 245, 128)" selected>Yellow</option>
+                <option value="rgb(157 166 253)">blue</option>
+            </select>
+            <select name="speed" id="speed">
+                <option value="300">slow</option>  
+                <option value="100" selected>Medium</option>  
+                <option value="50">fast</option>
+            </select>
+            <select name="nums" id="nums">
+                <option value="5">max 5</option>  
+                <option value="10" selected>max 10</option>  
+                <option value="99">max 99</option>
+            </select>
+        </div>
+        <div class="mainBox"></div>
+
+        <p>
+            Shortest Distance:<span id="distanceValue"></span>
+        </p>
+    </div>
+    <script src="js/b.js"></script>
+    <!-- <script src="js/a.js"></script> -->
+</body>
+
+</html>
