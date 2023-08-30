@@ -17,7 +17,7 @@ app.get("/cpus", (req, res) => {
 })
 app.post("/solver", async (req, res) => {
     if (isMainThread) {
-        const worker = new Worker('./worker.js');
+        const worker = new Worker(__dirname + '/worker.js');
         worker.postMessage(req.body);
         worker.on("message", (msg) => {
             res.send(msg);
